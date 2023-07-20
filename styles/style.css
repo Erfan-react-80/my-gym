@@ -1,0 +1,132 @@
+:root{
+    --primary: #4dd9e4;
+    --on-primary: #00363a;
+    --primary-container: #004f54;
+    --on-primary-contariner: #78f5ff;
+
+    --secondary: #f5aeff;
+    --on-secondary: #4f155d;
+    --secondary-container: #692e75;
+    --on-secondary-contariner: #fdd6ff;
+    
+    --background: #191c1c;
+    --on-background: #e0e3e3;
+    --surface: #191c1c;
+    --on-surface: #e0e3e3;
+    --outline: #899393;
+    --surface-varient: #3f4849;
+    --on-surface-varient: #bec8c9;
+
+    --body-font: "Vazirmatn";
+    --heading-font: "Vazirmatn"
+
+    --soc-shadow: 0px 0px 5px 1px;
+}
+@font-face {
+    font-family: "Vazirmatn";
+    src: url(../fonts/Vazirmatn-Regular.woff2);
+}
+
+/* Basic configurateion */
+a{
+    font-weight: bold;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.5em;
+    color: var(--on-background);
+}
+body{
+    font-family: var(--body-font);
+    background-color: var(--background);
+}
+p{
+    color: var(--on-surface);
+    text-align: justify;
+}
+img{
+    max-inline-size: 100%;
+    block-size: auto;
+}
+main{
+    padding: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile design */
+main > img{
+    border-radius: 50px;
+    margin: 20px;
+    box-shadow: 0px 0px 100px 0px rgb(123, 123, 123);
+}
+
+/* Heading design */
+h1{
+    color: var(--primary);
+    text-align: center;
+    margin: 0em 0.6em;
+}
+h2{
+    color: var(--secondary);
+    text-align: center;
+    margin: 0em 0.5em;
+}
+
+/* Social container */
+.soc-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-block-end: 2em;
+}
+.soc-container a{
+    border-radius: 20px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    margin: 0px 15px;
+}
+.soc-container a img{
+    height: 100%;
+}
+.soc-container a[href*="instagram"]{
+    background-color: #e517b5;
+    box-shadow: 0px 0px 10px 1px #e517b5
+}
+.soc-container a[href*="tel"]{
+    background-color: #17e5de;
+    box-shadow: 0px 0px 10px 1px #17e5de;
+}
+.soc-container a[href*="wa.me"]{
+    background-color: #2ce517;
+    box-shadow: 0px 0px 10px 1px #2ce517;
+}
+.soc-container a[href=""]{
+    background-color: var(--on-surface-varient);
+}
+
+/* Tip */
+p.tip{
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    align-self: stretch;
+    margin: 0.5rem 0rem;
+}
+p.tip.err::before{
+    content: 'x';
+    font-weight: bold;
+}
+p.err.tip{
+    color: #F2B8B5;
+    background-color: #410E0B;
+}
+p.tip.check{
+    color: #b5f2cd;
+    background-color: #0b4129;
+}
+p.tip.check::before{
+    content: "+";
+    font-weight: bold;
+    font-size: 1.2rem;
+}
